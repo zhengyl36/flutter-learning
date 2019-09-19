@@ -70,6 +70,7 @@ class _Login extends State<Login>{
                   onPressed: () {
                       print(this._name.text);
                       print(this._password.text);
+                      Navigator.of(context).pushNamed('/home');
                   },
                   child: new Text('按钮')
               ),
