@@ -10,3 +10,7 @@ flutter学习中，zyl你要振作啊！！！
 3.键盘遮挡输入框问题，外层使用Scaffold即可；
 
 4.内容超过屏幕大小，需要使用ListView
+
+5.直接使用TextField添加prefixIcon会有较宽的内边距导致文本和icon不对齐，暂时没有找到比较方便的改法，暂时先分开
+
+6.Row中不能直接使用TextField，可以在TextField外包一层Expanded
