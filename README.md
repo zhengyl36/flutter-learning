@@ -18,6 +18,5 @@ flutter学习中，zyl你要振作啊！！！
 当前进度：
 
 <center class="half">
-<img src="https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_2.png" width="360"/>
-<img src="https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_1.png" width="360"/>
+<img src="https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_2.png" width="360"/><img src="https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_1.png" width="360"/>
 </center>
