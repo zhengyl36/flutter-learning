@@ -17,5 +17,5 @@ flutter学习中，zyl你要振作啊！！！
 
 当前进度：
 
-![截屏1]（https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_1.png）
-![截屏2]（https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_2.png）
+![截屏1](https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_1.png)
+![截屏2](https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_2.png)
