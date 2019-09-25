@@ -5,14 +5,50 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Scaffold(
-      body: ListView(
-        children: <Widget>[
-          Header(),
-//          TabViewComponent(),
-        ],
+    return DefaultTabController(
+      length: 4,
+      child: new Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          brightness: Brightness.light,
+          elevation: 0,
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(40),
+            child: Container(
+              padding: EdgeInsets.only(left: 10, right: 10),
+              alignment: Alignment.centerLeft,
+              child: TabBar(
+                labelColor: Colors.lightBlue,
+                unselectedLabelColor: Colors.black,
+                indicatorWeight: 1,
+                isScrollable: true,
+                // labelPadding: EdgeInsets.frromLTRB(10, 0, 0, 0),
+                labelStyle: TextStyle(fontSize: 14),
+                tabs: <Widget>[
+                  Tab(text: '关注'),
+                  Tab(text: '推荐'),
+                  Tab(text: '热榜'),
+                  Tab(text: '前端'),
+                ],
+              ),
+            ),
+          ),
+          title: Header(),
+        ),
+        body: Container(
+          color: Color(0xfff2f2f2),
+          child: TabBarView(
+            children: <Widget>[
+              ListViewContnet(),
+              ListViewContnet(),
+              ListViewContnet(),
+              ListViewContnet(),
+            ],
+          ),
+        ),
+        bottomNavigationBar: new BottomSection(),
       ),
-      bottomNavigationBar: new BottomSection(),
     );
   }
 }
@@ -22,7 +58,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Container(
-      padding: EdgeInsets.all(10.0),
+      margin: EdgeInsets.only(top: 10),
       child: Column(
         children: <Widget>[
           Flex(
@@ -30,12 +66,12 @@ class Header extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Expanded(
-                flex: 4,
+                flex: 3,
                 child: Container(
                     margin: EdgeInsets.only(left: 10),
                     padding: EdgeInsets.only(left: 10),
                     decoration: BoxDecoration(
-                      color: Color(0xffdedede),
+                      color: Color(0xfff2f2f2),
                       borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     ),
                     child: Row(
@@ -64,7 +100,17 @@ class Header extends StatelessWidget {
                 child: Container(
                     child: new Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[Icon(Icons.settings), Text('标签')],
+                  children: <Widget>[
+                    Icon(
+                      Icons.settings,
+                      color: Colors.grey,
+                      size: 18,
+                    ),
+                    Text(
+                      '标签',
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
+                    )
+                  ],
                 )),
               ),
             ],
@@ -95,44 +141,26 @@ class BottomSection extends StatelessWidget {
   }
 }
 
+const TITLE = "测试";
 
-//class TabViewComponent extends StatefulWidget{
-//  TabViewComponent({Key key}) : super(key: key);
-//  _TabViewComponentState createState() => _TabViewComponentState();
-//}
-//
-//class _TabViewComponentState extends State<TabViewComponent> with SingleTickerProviderStateMixin{
-//  TabController _tabController;
-//
-//  @override
-//  void initState(){
-//    super.initState();
-//    this._tabController = new TabController(length: 4, vsync: this);
-//
-//  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    // TODO: implement build
-//    return Scaffold(
-//      appBar: AppBar(
-//        title: TabBar(
-//          controller: this._tabController,
-//          tabs: <Widget>[
-//            Tab(text: '1',),
-//            Tab(text: '2',),
-//            Tab(text: '3',),
-//            Tab(text: '4',),
-//          ],
-//        ),
-//      ),
-//      body: TabBarView(
-//        controller: this._tabController,
-//          children: <Widget>[
-//
-//
-//          ],
-//      )
-//    );
-//  }
-//}
+class ListViewContnet extends StatelessWidget {
+  const ListViewContnet({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+        ListTile(title: Text(TITLE)),
+      ],
+    );
+  }
+}
