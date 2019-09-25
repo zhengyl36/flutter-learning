@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../recommend/recommend.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class Home extends StatelessWidget {
     // TODO: implement build
     return DefaultTabController(
       length: 4,
+      initialIndex: 1,
       child: new Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -36,17 +38,14 @@ class Home extends StatelessWidget {
           ),
           title: Header(),
         ),
-        body: Container(
-          color: Color(0xfff2f2f2),
-          child: TabBarView(
+        body: TabBarView(
             children: <Widget>[
               ListViewContnet(),
-              ListViewContnet(),
+              Recommend(),
               ListViewContnet(),
               ListViewContnet(),
             ],
           ),
-        ),
         bottomNavigationBar: new BottomSection(),
       ),
     );
