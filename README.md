@@ -14,3 +14,8 @@ flutter学习中，zyl你要振作啊！！！
 5.直接使用TextField添加prefixIcon会有较宽的内边距导致文本和icon不对齐，暂时没有找到比较方便的改法，暂时先分开
 
 6.Row中不能直接使用TextField，可以在TextField外包一层Expanded
+
+当前进度：
+
+![截屏1]（https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_1.png）
+![截屏2]（https://github.com/zhengyl36/flutter_learning/blob/master/assets/Screenshot_2.png）
