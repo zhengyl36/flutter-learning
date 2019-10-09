@@ -12,8 +12,8 @@ class Recommend extends StatelessWidget{
             Padding(padding: EdgeInsets.only(top: 10),),
             Card(
               child: ListTile(
-                title: Text('90行代码，15个元素实现无限滚动'),
-                subtitle: Text('226人赞·前端劝退师·昨天'),
+                title: Text('无限滚动'),
+                subtitle: Text('226人赞·karl·昨天'),
                   trailing: Image(
                     image: AssetImage("assets/icon.png", ),
                     width: 48,
@@ -29,19 +29,19 @@ class Recommend extends StatelessWidget{
 
 final listItem = [
   {
-    "title": "90行代码，15个元素实现无限滚动",
+    "title": "实现无限滚动",
     "like": 1,
     "user": "karl1",
     "imageUrl": "assets/icon.png"
   },
   {
-    "title": "90行代码，15个元素实现无限滚动",
+    "title": "实现无限滚动",
     "like": 2,
     "user": "karl2",
     "imageUrl": "assets/icon.png"
   },
   {
-    "title": "90行代码，15个元素实现无限滚动",
+    "title": "123123131",
     "like": 3,
     "user": "karl3",
     "imageUrl": "assets/icon.png"
